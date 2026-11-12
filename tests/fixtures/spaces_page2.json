@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "object": "space",
+      "id": "S2kLmNoPqRsTuVwXyZ01",
+      "title": "Internal handbook",
+      "emoji": "1f4d7",
+      "visibility": "private",
+      "createdAt": "2024-03-02T09:00:00.000Z",
+      "updatedAt": "2026-10-30T14:21:07.000Z",
+      "editMode": "live",
+      "mergeRules": {
+        "type": "inherit"
+      },
+      "urls": {
+        "location": "https://api.gitbook.com/v1/spaces/S2kLmNoPqRsTuVwXyZ01",
+        "app": "https://app.gitbook.com/s/S2kLmNoPqRsTuVwXyZ01/",
+        "published": "https://docs.example.com/"
+      },
+      "organization": "Kq8Zx1aBcDeFgHiJkLmN",
+      "language": "en",
+      "revision": "R3vAbCdEfGhIjKlMnOp1",
+      "defaultLevel": "inherit",
+      "comments": 3,
+      "changeRequests": 12,
+      "changeRequestsOpen": 2,
+      "changeRequestsDraft": 1,
+      "permissions": {
+        "view": true,
+        "access": true,
+        "admin": true,
+        "viewInviteLinks": true,
+        "edit": true,
+        "triggerGitSync": true,
+        "comment": true,
+        "merge": true,
+        "review": true,
+        "installIntegration": true
+      },
+      "parent": "C7hJkLmNoPqRsTuVwX12"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "object": "organization",
+      "id": "Kq8Zx1aBcDeFgHiJkLmN",
+      "title": "Example Inc",
+      "createdAt": "2024-03-01T10:00:00.000Z",
+      "emailDomains": [
+        "example.com"
+      ],
+      "type": "business",
+      "defaultRole": "read",
+      "sso": false,
+      "ai": true,
+      "inviteLinks": true,
+      "urls": {
+        "location": "https://api.gitbook.com/v1/orgs/Kq8Zx1aBcDeFgHiJkLmN",
+        "app": "https://app.gitbook.com/o/Kq8Zx1aBcDeFgHiJkLmN/"
+      },
+      "permissions": {
+        "view": true,
+        "access": true,
+        "admin": true,
+        "ownTeam": true,
+        "createContent": true,
+        "createOpenAPISpec": true,
+        "viewBilling": true,
+        "listMembers": true,
+        "listTeams": true,
+        "listIntegrations": true,
+        "listInstallations": true,
+        "installIntegration": true
+      }
+    }
+  ],
+  "next": {
+    "page": "cGFnZTI"
+  },
+  "count": 2
+}

@@ -1,0 +1,10 @@
+{
+  "object": "user",
+  "id": "U5sErAbCdEfGhIjKlMn1",
+  "displayName": "Ada Lovelace",
+  "email": "ada@example.com",
+  "photoURL": "https://lh3.googleusercontent.com/a/example",
+  "urls": {
+    "location": "https://api.gitbook.com/v1/users/U5sErAbCdEfGhIjKlMn1"
+  }
+}

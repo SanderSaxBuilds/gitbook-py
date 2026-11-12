@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "object": "member",
+      "id": "U5sErAbCdEfGhIjKlMn1",
+      "role": "admin",
+      "user": {
+        "object": "user",
+        "id": "U5sErAbCdEfGhIjKlMn1",
+        "displayName": "Ada Lovelace",
+        "email": "ada@example.com",
+        "photoURL": "https://lh3.googleusercontent.com/a/example",
+        "urls": {
+          "location": "https://api.gitbook.com/v1/users/U5sErAbCdEfGhIjKlMn1"
+        }
+      },
+      "disabled": false,
+      "joinedAt": "2024-03-01T10:00:00.000Z",
+      "lastSeenAt": "2026-11-12T07:00:00.000Z",
+      "sso": false,
+      "spaces": 4,
+      "teams": 1,
+      "sites": 1
+    },
+    {
+      "object": "member",
+      "id": "U6bObAbCdEfGhIjKlMn2",
+      "role": null,
+      "user": {
+        "object": "user",
+        "id": "U6bObAbCdEfGhIjKlMn2",
+        "displayName": "Charles Babbage",
+        "urls": {
+          "location": "https://api.gitbook.com/v1/users/U6bObAbCdEfGhIjKlMn2"
+        }
+      },
+      "disabled": false,
+      "joinedAt": "2025-01-10T10:00:00.000Z",
+      "sso": false,
+      "spaces": 1,
+      "teams": 0,
+      "sites": 0
+    }
+  ]
+}

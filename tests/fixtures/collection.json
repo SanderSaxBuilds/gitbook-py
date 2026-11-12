@@ -1,0 +1,18 @@
+{
+  "object": "collection",
+  "id": "C7hJkLmNoPqRsTuVwX12",
+  "title": "Developer docs",
+  "description": "Guides for the public API",
+  "organization": "Kq8Zx1aBcDeFgHiJkLmN",
+  "defaultLevel": "inherit",
+  "urls": {
+    "location": "https://api.gitbook.com/v1/collections/C7hJkLmNoPqRsTuVwX12",
+    "app": "https://app.gitbook.com/o/Kq8Zx1aBcDeFgHiJkLmN/c/C7hJkLmNoPqRsTuVwX12/"
+  },
+  "permissions": {
+    "view": true,
+    "admin": true,
+    "viewInviteLinks": true,
+    "create": true
+  }
+}

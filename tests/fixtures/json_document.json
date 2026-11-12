@@ -1,0 +1,164 @@
+{
+  "object": "document",
+  "data": {
+    "schemaVersion": 1
+  },
+  "nodes": [
+    {
+      "object": "block",
+      "type": "heading-1",
+      "key": "h1",
+      "nodes": [
+        {
+          "object": "text",
+          "leaves": [
+            {
+              "object": "leaf",
+              "text": "Authentication",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "data": {}
+    },
+    {
+      "object": "block",
+      "type": "paragraph",
+      "key": "p1",
+      "nodes": [
+        {
+          "object": "text",
+          "leaves": [
+            {
+              "object": "leaf",
+              "text": "Send your token in the ",
+              "marks": []
+            },
+            {
+              "object": "leaf",
+              "text": "Authorization",
+              "marks": [
+                {
+                  "object": "mark",
+                  "type": "code"
+                }
+              ]
+            },
+            {
+              "object": "leaf",
+              "text": " header. See ",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "object": "inline",
+          "type": "link",
+          "key": "l1",
+          "data": {
+            "ref": {
+              "kind": "url",
+              "url": "https://example.com/tokens"
+            }
+          },
+          "nodes": [
+            {
+              "object": "text",
+              "leaves": [
+                {
+                  "object": "leaf",
+                  "text": "tokens",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "object": "text",
+          "leaves": [
+            {
+              "object": "leaf",
+              "text": ".",
+              "marks": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "object": "block",
+      "type": "code",
+      "key": "c1",
+      "data": {
+        "syntax": "bash"
+      },
+      "nodes": [
+        {
+          "object": "block",
+          "type": "code-line",
+          "key": "cl1",
+          "data": {},
+          "nodes": [
+            {
+              "object": "text",
+              "leaves": [
+                {
+                  "object": "leaf",
+                  "text": "export GITBOOK_TOKEN=gb_api_xxx",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "object": "block",
+          "type": "code-line",
+          "key": "cl2",
+          "data": {},
+          "nodes": [
+            {
+              "object": "text",
+              "leaves": [
+                {
+                  "object": "leaf",
+                  "text": "curl -H \"Authorization: Bearer $GITBOOK_TOKEN\"",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "object": "block",
+      "type": "hint",
+      "key": "hint1",
+      "data": {
+        "style": "warning"
+      },
+      "nodes": [
+        {
+          "object": "block",
+          "type": "paragraph",
+          "key": "hp",
+          "nodes": [
+            {
+              "object": "text",
+              "leaves": [
+                {
+                  "object": "leaf",
+                  "text": "Never commit tokens to git.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

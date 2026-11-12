@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "id": "P3aUtHaBcDeFgHiJkL01",
+      "title": "Authentication",
+      "description": "Authentication for the Example API",
+      "path": "guides/authentication",
+      "score": 12.5,
+      "rank": 1,
+      "resultType": "section",
+      "sections": [
+        {
+          "id": "P3aUtHaBcDeFgHiJkL01#bearer-tokens",
+          "title": "Bearer tokens",
+          "path": "guides/authentication#bearer-tokens",
+          "score": 9.1,
+          "resultType": "section",
+          "body": "Send your **token** in the `Authorization` header as `Bearer <token>`. Tokens are created in [Developer settings](https://app.gitbook.com/account/developer).",
+          "urls": {
+            "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/guides/authentication#bearer-tokens"
+          }
+        },
+        {
+          "id": "P3aUtHaBcDeFgHiJkL01#rotating",
+          "title": "Rotating a token",
+          "path": "guides/authentication#rotating",
+          "score": 4.0,
+          "resultType": "section",
+          "body": "Revoke an old token after the new one works.",
+          "urls": {
+            "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/guides/authentication#rotating"
+          }
+        }
+      ],
+      "ancestors": [
+        {
+          "title": "Guides"
+        }
+      ],
+      "urls": {
+        "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/guides/authentication"
+      }
+    },
+    {
+      "id": "P1qUiCkStArTaBcDeF01",
+      "title": "Quickstart",
+      "description": "Make your first request with a token in five minutes.",
+      "path": "getting-started",
+      "score": 3.2,
+      "rank": 2,
+      "resultType": "page",
+      "sections": [],
+      "ancestors": [],
+      "urls": {
+        "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/getting-started"
+      }
+    }
+  ],
+  "next": {
+    "page": "c2VhcmNoMg"
+  }
+}

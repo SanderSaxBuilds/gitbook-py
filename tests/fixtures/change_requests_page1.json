@@ -1,0 +1,47 @@
+{
+  "items": [
+    {
+      "object": "change-request",
+      "id": "CR4bCdEfGhIjKlMnOpQr",
+      "number": 42,
+      "status": "open",
+      "subject": "Document the search endpoint",
+      "createdBy": {
+        "object": "user",
+        "id": "U5sErAbCdEfGhIjKlMn1",
+        "displayName": "Ada Lovelace",
+        "email": "ada@example.com",
+        "photoURL": "https://lh3.googleusercontent.com/a/example",
+        "urls": {
+          "location": "https://api.gitbook.com/v1/users/U5sErAbCdEfGhIjKlMn1"
+        }
+      },
+      "createdAt": "2026-11-01T08:00:00.000Z",
+      "updatedAt": "2026-11-02T08:30:00.000Z",
+      "space": "S9pQrT2uVwXyZ0aB1cDe",
+      "revision": "R8hEaDAbCdEfGhIjKlM1",
+      "revisionInitial": "R3vAbCdEfGhIjKlMnOp1",
+      "comments": 1,
+      "changeCounts": {
+        "pages": {
+          "added": 1,
+          "modified": 2,
+          "deleted": 0
+        },
+        "library": {
+          "added": 0,
+          "modified": 0,
+          "deleted": 0
+        }
+      },
+      "outdated": false,
+      "urls": {
+        "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/~/changes/42/",
+        "location": "https://api.gitbook.com/v1/spaces/S9pQrT2uVwXyZ0aB1cDe/change-requests/CR4bCdEfGhIjKlMnOpQr"
+      }
+    }
+  ],
+  "next": {
+    "page": "Y3IyCg"
+  }
+}

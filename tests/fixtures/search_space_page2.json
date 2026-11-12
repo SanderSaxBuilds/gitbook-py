@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "P2inStAlLaBcDeFgHi01",
+      "title": "Install",
+      "description": "",
+      "path": "getting-started/install",
+      "score": 1.1,
+      "rank": 3,
+      "ancestors": [
+        {
+          "title": "Quickstart"
+        }
+      ],
+      "urls": {
+        "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/getting-started/install"
+      }
+    }
+  ]
+}

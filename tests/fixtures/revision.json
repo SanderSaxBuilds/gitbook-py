@@ -1,0 +1,142 @@
+{
+  "object": "revision",
+  "id": "R3vAbCdEfGhIjKlMnOp1",
+  "type": "edits",
+  "parents": [
+    "R0pArEnTaBcDeFgHiJk1"
+  ],
+  "pages": [
+    {
+      "id": "P1qUiCkStArTaBcDeF01",
+      "title": "Quickstart",
+      "kind": "sheet",
+      "type": "document",
+      "urls": {
+        "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/getting-started"
+      },
+      "slug": "quickstart",
+      "path": "getting-started",
+      "description": "Quickstart for the Example API",
+      "pages": [
+        {
+          "id": "P2inStAlLaBcDeFgHi01",
+          "title": "Install",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/getting-started/install"
+          },
+          "slug": "install",
+          "path": "getting-started/install",
+          "description": "Install for the Example API",
+          "pages": [],
+          "layout": {
+            "width": "default",
+            "cover": false,
+            "coverSize": "hero",
+            "coverMask": "none",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true,
+            "metadata": true,
+            "tags": true,
+            "actions": true,
+            "anchors": true
+          },
+          "tags": [],
+          "documentId": "D2inStAlLaBcDeFgHi01"
+        }
+      ],
+      "layout": {
+        "width": "default",
+        "cover": false,
+        "coverSize": "hero",
+        "coverMask": "none",
+        "title": true,
+        "description": true,
+        "tableOfContents": true,
+        "outline": true,
+        "pagination": true,
+        "metadata": true,
+        "tags": true,
+        "actions": true,
+        "anchors": true
+      },
+      "tags": [],
+      "documentId": "D1qUiCkStArTaBcDeF01"
+    },
+    {
+      "id": "P5gRoUpAbCdEfGhIjK01",
+      "title": "Guides",
+      "kind": "group",
+      "type": "group",
+      "slug": "guides",
+      "path": "guides",
+      "pages": [
+        {
+          "id": "P3aUtHaBcDeFgHiJkL01",
+          "title": "Authentication",
+          "kind": "sheet",
+          "type": "document",
+          "urls": {
+            "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/guides/authentication"
+          },
+          "slug": "authentication",
+          "path": "guides/authentication",
+          "description": "Authentication for the Example API",
+          "pages": [],
+          "layout": {
+            "width": "default",
+            "cover": false,
+            "coverSize": "hero",
+            "coverMask": "none",
+            "title": true,
+            "description": true,
+            "tableOfContents": true,
+            "outline": true,
+            "pagination": true,
+            "metadata": true,
+            "tags": true,
+            "actions": true,
+            "anchors": true
+          },
+          "tags": [],
+          "documentId": "D3aUtHaBcDeFgHiJkL01"
+        },
+        {
+          "id": "P4lInKaBcDeFgHiJkL01",
+          "title": "Status page",
+          "kind": "link",
+          "type": "link",
+          "target": {
+            "kind": "url",
+            "url": "https://status.example.com"
+          },
+          "href": "https://status.example.com"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "id": "F1lEaBcDeFgHiJkLmNo1",
+      "name": "diagram.png",
+      "contentType": "image/png",
+      "downloadURL": "https://files.gitbook.com/v0/b/example/diagram.png",
+      "size": 20480,
+      "dimensions": {
+        "width": 1200,
+        "height": 630
+      }
+    }
+  ],
+  "reusableContents": [],
+  "tags": [],
+  "createdAt": "2026-10-30T14:21:07.000Z",
+  "urls": {
+    "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/",
+    "published": "https://docs.example.com/"
+  }
+}

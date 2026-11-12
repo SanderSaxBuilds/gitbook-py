@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "object": "organization",
+      "id": "Kp2Yy9aBcDeFgHiJkLmO",
+      "title": "Side Project",
+      "createdAt": "2024-03-01T10:00:00.000Z",
+      "emailDomains": [
+        "example.com"
+      ],
+      "type": "business",
+      "defaultRole": "read",
+      "sso": false,
+      "ai": true,
+      "inviteLinks": true,
+      "urls": {
+        "location": "https://api.gitbook.com/v1/orgs/Kp2Yy9aBcDeFgHiJkLmO",
+        "app": "https://app.gitbook.com/o/Kp2Yy9aBcDeFgHiJkLmO/"
+      },
+      "permissions": {
+        "view": true,
+        "access": true,
+        "admin": true,
+        "ownTeam": true,
+        "createContent": true,
+        "createOpenAPISpec": true,
+        "viewBilling": true,
+        "listMembers": true,
+        "listTeams": true,
+        "listIntegrations": true,
+        "listInstallations": true,
+        "installIntegration": true
+      }
+    }
+  ],
+  "count": 2
+}

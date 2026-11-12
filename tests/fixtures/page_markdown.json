@@ -1,0 +1,31 @@
+{
+  "id": "P3aUtHaBcDeFgHiJkL01",
+  "title": "Authentication",
+  "kind": "sheet",
+  "type": "document",
+  "urls": {
+    "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/guides/authentication"
+  },
+  "slug": "authentication",
+  "path": "guides/authentication",
+  "description": "Authentication for the Example API",
+  "pages": [],
+  "layout": {
+    "width": "default",
+    "cover": false,
+    "coverSize": "hero",
+    "coverMask": "none",
+    "title": true,
+    "description": true,
+    "tableOfContents": true,
+    "outline": true,
+    "pagination": true,
+    "metadata": true,
+    "tags": true,
+    "actions": true,
+    "anchors": true
+  },
+  "tags": [],
+  "documentId": "D3aUtHaBcDeFgHiJkL01",
+  "markdown": "# Authentication\n\nSend your token in the `Authorization` header. See [tokens](https://example.com/tokens).\n\n```bash\nexport GITBOOK_TOKEN=gb_api_xxx\n```\n\n{% hint style=\"warning\" %}\nNever commit **tokens** to git.\n{% endhint %}\n"
+}

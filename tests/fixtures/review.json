@@ -1,0 +1,30 @@
+{
+  "object": "change-request-review",
+  "id": "RV1aBcDeFgHiJkLmNoP1",
+  "revision": "R8hEaDAbCdEfGhIjKlM1",
+  "reviewer": {
+    "object": "user",
+    "id": "U6bObAbCdEfGhIjKlMn2",
+    "displayName": "Charles Babbage",
+    "urls": {
+      "location": "https://api.gitbook.com/v1/users/U6bObAbCdEfGhIjKlMn2"
+    }
+  },
+  "requestedBy": {
+    "object": "user",
+    "id": "U5sErAbCdEfGhIjKlMn1",
+    "displayName": "Ada Lovelace",
+    "email": "ada@example.com",
+    "photoURL": "https://lh3.googleusercontent.com/a/example",
+    "urls": {
+      "location": "https://api.gitbook.com/v1/users/U5sErAbCdEfGhIjKlMn1"
+    }
+  },
+  "status": "approved",
+  "outdated": false,
+  "createdAt": "2026-11-02T09:00:00.000Z",
+  "updatedAt": "2026-11-02T09:00:00.000Z",
+  "urls": {
+    "location": "https://api.gitbook.com/v1/spaces/S9pQrT2uVwXyZ0aB1cDe/change-requests/CR4bCdEfGhIjKlMnOpQr/reviews/RV1aBcDeFgHiJkLmNoP1"
+  }
+}

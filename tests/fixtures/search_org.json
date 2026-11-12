@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "type": "space",
+      "id": "S9pQrT2uVwXyZ0aB1cDe",
+      "title": "Example API docs",
+      "score": 12.5,
+      "pages": [
+        {
+          "id": "P3aUtHaBcDeFgHiJkL01",
+          "title": "Authentication",
+          "description": "Authentication for the Example API",
+          "path": "guides/authentication",
+          "score": 12.5,
+          "rank": 1,
+          "ancestors": [
+            {
+              "title": "Guides"
+            }
+          ],
+          "urls": {
+            "app": "https://app.gitbook.com/s/S9pQrT2uVwXyZ0aB1cDe/guides/authentication"
+          }
+        }
+      ]
+    },
+    {
+      "type": "space",
+      "id": "S2kLmNoPqRsTuVwXyZ01",
+      "title": "Internal handbook",
+      "score": 2.0,
+      "pages": []
+    }
+  ]
+}

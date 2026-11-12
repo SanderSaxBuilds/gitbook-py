@@ -1,0 +1,14 @@
+{
+  "error": {
+    "type": "feature-not-available",
+    "code": 403,
+    "message": "Change request merge rules are not available on your plan",
+    "upgrade": {
+      "type": "organization",
+      "feature": "change-requests-merge-rules",
+      "requiredPlan": "pro_2024",
+      "requiredPlanName": "Pro",
+      "url": "https://app.gitbook.com/o/Kq8Zx1aBcDeFgHiJkLmN/settings/billing"
+    }
+  }
+}
