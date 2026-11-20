@@ -41,7 +41,7 @@ def test_default_headers_sent(client: GitBook, api: respx.MockRouter) -> None:
     headers = route.calls.last.request.headers
     assert headers["authorization"] == f"Bearer {TOKEN}"
     assert headers["accept"] == "application/json"
-    assert headers["user-agent"].startswith("gitbook-py/0.1.0 python/")
+    assert headers["user-agent"].startswith("gitbook-py/0.2.0 python/")
 
 
 def test_custom_user_agent_and_headers(api: respx.MockRouter) -> None:

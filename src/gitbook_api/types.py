@@ -374,6 +374,24 @@ class RevisionUrls(TypedDict, total=False):
     public: str
 
 
+class RevisionTag(TypedDict, total=False):
+    """``#/components/schemas/RevisionTag``, a tag or a category of tags."""
+
+    slug: Required[str]
+    label: Required[str]
+    kind: Literal["category"]
+    parent: str
+    color: Required[str]
+    emoji: str
+    icon: str
+
+
+class RevisionTagWithPageCount(RevisionTag, total=False):
+    """A tag from ``listTags`` with the number of visible pages it covers."""
+
+    pageCount: Required[int]
+
+
 class Revision(TypedDict, total=False):
     """``#/components/schemas/Revision`` (all five revision types)."""
 
@@ -384,12 +402,14 @@ class Revision(TypedDict, total=False):
     pages: Required[List[RevisionPage]]
     files: Required[List[JSONObject]]
     reusableContents: Required[List[JSONObject]]
-    tags: Required[List[JSONObject]]
+    tags: Required[List[RevisionTag]]
     variables: JSONObject
     createdAt: Required[str]
     git: JSONObject
     urls: Required[RevisionUrls]
-    mergedFrom: "ChangeRequest"
+    mergedFrom: "RevisionMergedFrom"
+    """Only on ``merge`` revisions, and absent when the caller cannot view the
+    site change request the revision came from."""
     sourceRevision: str
 
 
@@ -432,6 +452,39 @@ class ChangeRequest(TypedDict, total=False):
     imports: List[JSONObject]
     links: JSONObject
     urls: Required[ChangeRequestUrls]
+
+
+class SiteChangeRequest(TypedDict, total=False):
+    """``#/components/schemas/SiteChangeRequest``.
+
+    A change request on a whole site, which publishes every space it edits at
+    once. It can show up as the ``mergedFrom`` of a space revision.
+    """
+
+    object: Required[Literal["site-change-request"]]
+    id: Required[str]
+    organization: Required[str]
+    site: Required[str]
+    number: Required[int]
+    version: Required[int]
+    status: Required["ChangeRequestStatus"]
+    subject: Required[str]
+    description: JSONDocument
+    links: JSONObject
+    content: Required[List[JSONObject]]
+    structure: JSONObject
+    customization: JSONObject
+    comments: Required[int]
+    createdBy: Required["User"]
+    createdAt: Required[str]
+    updatedAt: Required[str]
+    mergedBy: "User"
+    mergedAt: str
+    urls: Required[ChangeRequestUrls]
+
+
+RevisionMergedFrom = Union[ChangeRequest, SiteChangeRequest]
+"""Tell the two apart by ``object``: ``"change-request"`` or ``"site-change-request"``."""
 
 
 class ChangeRequestMergeResult(TypedDict):
@@ -562,9 +615,13 @@ __all__ = [
     "RevisionPageDocument",
     "RevisionPageGroup",
     "RevisionPageLink",
+    "RevisionMergedFrom",
+    "RevisionTag",
+    "RevisionTagWithPageCount",
     "SearchPageResult",
     "SearchSectionResult",
     "SearchSpaceResult",
+    "SiteChangeRequest",
     "SortOrder",
     "Space",
     "SpaceEditMode",

@@ -9,7 +9,7 @@ Every method reads from one of three sources:
 
 from __future__ import annotations
 
-from typing import Any, Dict, Iterable, Iterator, List, Literal, Optional, Union, cast
+from typing import Any, Dict, Iterable, Iterator, List, Literal, Optional, Sequence, Union, cast
 
 from .._base import page_path_segment, segment
 from ..types import JSONDocument, MarkdownRefsFormat, PageFormat, RevisionPage
@@ -69,6 +69,20 @@ def _markdown_of(page: Any) -> str:
     return ""
 
 
+def _tag_query(tag: Union[str, Sequence[str], None]) -> Optional[List[str]]:
+    """Normalise the ``tag`` filter of the page list endpoints.
+
+    One slug or several, sent as a repeated ``tag`` parameter. The API needs
+    at least one non-empty slug when the parameter is present.
+    """
+    if tag is None:
+        return None
+    slugs = [tag] if isinstance(tag, str) else list(tag)
+    if not slugs or any(not isinstance(s, str) or not s for s in slugs):
+        raise ValueError("tag must be a non-empty slug or a non-empty list of slugs")
+    return slugs
+
+
 def _pages_of(data: Any) -> List[RevisionPage]:
     if isinstance(data, dict) and isinstance(data.get("pages"), list):
         return cast(List[RevisionPage], data["pages"])
@@ -84,15 +98,22 @@ class PagesResource(SyncResource):
         revision_id: Optional[str] = None,
         metadata: Optional[bool] = None,
         computed: Optional[bool] = None,
+        tag: Union[str, Sequence[str], None] = None,
     ) -> List[RevisionPage]:
         """The page tree (``listPages``, ``listPagesInChangeRequest``, ``listPagesInRevisionById``).
 
         Top-level pages come back with children nested under ``pages``.
         Use :func:`iter_pages` to walk all of them.
+
+        ``tag`` narrows the tree to document pages tagged with any of the
+        given tag or category slugs, plus the pages above them. Get the slugs
+        from :meth:`SpacesResource.list_tags`.
         """
         path = _prefix(space_id, change_request_id, revision_id) + "/pages"
         data = self._client.request(
-            "GET", path, params={"metadata": metadata, "computed": computed}
+            "GET",
+            path,
+            params={"metadata": metadata, "computed": computed, "tag": _tag_query(tag)},
         )
         return _pages_of(data)
 
@@ -188,11 +209,14 @@ class AsyncPagesResource(AsyncResource):
         revision_id: Optional[str] = None,
         metadata: Optional[bool] = None,
         computed: Optional[bool] = None,
+        tag: Union[str, Sequence[str], None] = None,
     ) -> List[RevisionPage]:
-        """The page tree of a space, change request or revision."""
+        """The page tree of a space, change request or revision, optionally narrowed by ``tag``."""
         path = _prefix(space_id, change_request_id, revision_id) + "/pages"
         data = await self._client.request(
-            "GET", path, params={"metadata": metadata, "computed": computed}
+            "GET",
+            path,
+            params={"metadata": metadata, "computed": computed, "tag": _tag_query(tag)},
         )
         return _pages_of(data)
 

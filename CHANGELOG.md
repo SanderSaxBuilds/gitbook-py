@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0
+
+Follows `@gitbook/api` 0.210 and 0.211 (18 and 19 November 2026).
+
+- `spaces.list_tags()` for the new `listTags` endpoint: every tag and category of the published content, parents first, with `pageCount`.
+- `pages.list(tag=...)` takes one slug or several, sent as a repeated `tag` parameter, on live content, change requests and revisions. An empty slug or list raises `ValueError` before the request.
+- `Revision.mergedFrom` is now `ChangeRequest | SiteChangeRequest` and may be absent, matching the new `RevisionMergedFrom` schema. New `SiteChangeRequest`, `RevisionTag` and `RevisionTagWithPageCount` types, and `Revision.tags` is typed.
+- Two new fixtures, checked against the 0.211 spec by `scripts/validate_fixtures.py`. 233 tests.
+
 ## 0.1.0
 
 First release.

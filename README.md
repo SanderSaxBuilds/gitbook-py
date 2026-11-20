@@ -88,6 +88,7 @@ gb.spaces.restore("space_id")
 
 gb.spaces.get_current_revision("space_id")
 gb.spaces.get_revision("space_id", "revision_id")
+gb.spaces.list_tags("space_id")            # tags and categories with page counts
 ```
 
 `update()` only sends the fields you pass, so leaving a field out keeps its current value. Passing `None` sends `null`: `emoji=None` removes the emoji, and `default_level=None` sets the guest level, which gives members no default access. `default_level="inherit"` takes the level from the parent collection.
@@ -107,6 +108,17 @@ page = gb.pages.get_by_path("space_id", "guides/authentication")
 markdown = gb.pages.get_markdown("space_id", "page_id")
 document = gb.pages.get_document("space_id", "page_id")   # JSON block tree
 ```
+
+To list only the pages behind some tags, pass their slugs. The tree keeps the pages above each match, so it still nests:
+
+```python
+for tag in gb.spaces.list_tags("space_id"):
+    print(tag["slug"], tag.get("parent"), tag["pageCount"])
+
+api_pages = gb.pages.list("space_id", tag=["api", "cli"])   # pages tagged api or cli
+```
+
+A merge revision's `mergedFrom` can be a space change request or a site change request, which publishes several spaces at once. Check `mergedFrom["object"]` (`"change-request"` or `"site-change-request"`), and expect the field to be missing when the token cannot see that site change request.
 
 Every page method reads the live content by default. Pass `change_request_id=` to read a change request's content, or `revision_id=` to read a past revision. `get()` also takes `format="markdown"` or `format="document"`, `evaluated=True` and `dereferenced=True`.
 

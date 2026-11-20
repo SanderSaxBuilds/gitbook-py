@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import Any, Dict, Optional, Union, cast
+from typing import Any, Dict, List, Optional, Union, cast
 
 from .._base import NOT_GIVEN, NotGiven, compact, segment
 from ..pagination import AsyncPaginator, SyncPaginator
@@ -10,6 +10,7 @@ from ..types import (
     ContentPosition,
     DefaultLevel,
     Revision,
+    RevisionTagWithPageCount,
     Space,
     SpaceEditMode,
     TranslationLanguage,
@@ -88,6 +89,12 @@ def _move_body(
 
 def _revision_query(metadata: Optional[bool], computed: Optional[bool]) -> Dict[str, Any]:
     return {"metadata": metadata, "computed": computed}
+
+
+def _tags_of(data: Any) -> List[RevisionTagWithPageCount]:
+    if isinstance(data, dict) and isinstance(data.get("tags"), list):
+        return cast(List[RevisionTagWithPageCount], data["tags"])
+    raise TypeError("expected an object with a 'tags' array")
 
 
 class SpacesResource(SyncResource):
@@ -203,6 +210,14 @@ class SpacesResource(SyncResource):
             self._client.request("GET", path, params=_revision_query(metadata, computed)),
         )
 
+    def list_tags(self, space_id: str) -> List[RevisionTagWithPageCount]:
+        """Tags and categories of the published content, with page counts (``listTags``).
+
+        Parents come before children. Pass slugs to ``pages.list(tag=...)``
+        to get the pages behind a tag.
+        """
+        return _tags_of(self._client.request("GET", _space(space_id) + "/content/tags"))
+
 
 class AsyncSpacesResource(AsyncResource):
     def list(
@@ -308,3 +323,7 @@ class AsyncSpacesResource(AsyncResource):
             Revision,
             await self._client.request("GET", path, params=_revision_query(metadata, computed)),
         )
+
+    async def list_tags(self, space_id: str) -> List[RevisionTagWithPageCount]:
+        """Tags and categories of the published content, with page counts."""
+        return _tags_of(await self._client.request("GET", _space(space_id) + "/content/tags"))

@@ -1,0 +1,32 @@
+{
+  "tags": [
+    {
+      "slug": "platform",
+      "label": "Platform",
+      "kind": "category",
+      "color": "blue",
+      "pageCount": 3
+    },
+    {
+      "slug": "api",
+      "label": "API",
+      "parent": "platform",
+      "color": "green",
+      "emoji": "1f50c",
+      "pageCount": 2
+    },
+    {
+      "slug": "cli",
+      "label": "CLI",
+      "parent": "platform",
+      "color": "orange",
+      "pageCount": 1
+    },
+    {
+      "slug": "beta",
+      "label": "Beta",
+      "color": "purple",
+      "pageCount": 0
+    }
+  ]
+}

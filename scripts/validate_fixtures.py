@@ -53,6 +53,8 @@ TARGETS: Dict[str, str] = {
     "review.json": response(CR + "/reviews", "post", "201"),
     "revision.json": response(S + "/content", "get"),
     "pages.json": response(S + "/content/pages", "get"),
+    "tags.json": response(S + "/content/tags", "get"),
+    "revision_merge_site.json": response(S + "/revisions/{revisionId}", "get"),
     "page_markdown.json": response(S + "/content/page/{pageId}", "get"),
     "page_document.json": response(S + "/content/page/{pageId}", "get"),
     "page_group.json": response(S + "/content/path/{pagePath}", "get"),
